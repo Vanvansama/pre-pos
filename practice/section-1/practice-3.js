@@ -1,5 +1,24 @@
 'use strict';
 
 function collectSameElements(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  const result = [];
+  collectionA.forEach(element => {
+    if (objectB.value.indexOf(element) >= 0) {
+      result.push(element);
+    }
+  });
+  return result;
+}
+
+
+function collectSameElements2(collectionA, collectionB) {
+  const result = [];
+  collectionA.forEach(element => {
+    collectionB.value.forEach(elementB => {
+      if (element == elementB) {
+        result.push(elementB);
+      }
+    });
+  });
+  return result;
 }
